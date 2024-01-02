@@ -10,11 +10,11 @@ const General = () => {
   return (
     <Page title="General">
         <Layout>
-            <Label className={"custom-label"}>Campaign</Label>
-            <TextField value={campaign} onChange={(value) => setCampaign(value)} />
-            <Label>Title</Label>
+            <span className="custom-label">Campaign</span>
+            <TextField className="text-field" value={campaign} onChange={(value) => setCampaign(value)} />
+            <span className="custom-label">Title</span>
             <TextField value={title} onChange={(value) => setTitle(value)} />
-            <Label>Description</Label>
+            <span className="custom-label">Description</span>
             <TextField value={description} onChange={(value) => setDescription(value)} />
           {/* <Stack distribution="trailing">
             <Button primary submit>
