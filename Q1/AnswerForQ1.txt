@@ -1,0 +1,17 @@
+	- Giải thích về Dependency Injection
+			+ Dependency Injection có thể được coi như một Design Pattern, thường dùng để áp dụng cho NGUYÊN LÝ Dependency Inversion Injection
+			để dễ dàng thay đổi hoặc tái sử dụng các thành phần của phần mềm
+	- Cách sử dụng -->	VD: (From Admission Project in CV)
+			+ Contract:
+				. IRepository: Chứa các interface của Module Repository.
+				. IService: Chứa các interface của Module Service.
+			+ Repository:
+				. Implement các method từ IRepository trong class Contract , thao tác với Database
+			+ Service:
+				. Implement các method từ IService trong class Contract, thao tác bên trong method của Service sẽ được gọi tới IRepository.
+				. Các action trong controller sẽ chỉ thao tác với Service qua IService.
+	- Với .Net Core:
+			+ Các Service/Repository sẽ được thêm trong class Startup.cs
+			+ .Net core hỗ trợ extension: Dependency Inversion Principle. Có thể dùng extension này để đăng ký Service/Repository bằng action "AddTransient".
+	- Với .Net Framework:
+			+ Có thể sử dụng Autofac để tạo các Container, đăng ký các Repository/Service bởi Container này.

@@ -1,0 +1,14 @@
+- Để tối ưu hóa tốc độ truy vấn khi lưu trữ dữ liệu sự kiện hàng ngày trong SQL với 10 triệu bản ghi mỗi ngày:
+    + ĐỌC:
+        . Các cách truyền thống:
+            . Đánh index, dùng dapper để read data, sử dụng StoreProcedure thay vì Raw Query.
+            . Các column nvarchar/varchar sẽ được đặt capacity phù hợp, tránh để MAX
+            . Sử dụng các kỹ thuật Caching khác như: Redis, ElasticSearch, Memcached
+        . Cách khác:
+            . Chia nhỏ bảng theo khung giờ.
+            . Với các dạng biểu đồ phân tích lượng data lớn, có thể viết tool phân tích kết quả ra 1 bảng phụ,
+                tool đó có thể chạy realtime để phục vụ việc phân tích dữ liệu.
+    + GHI:
+        . Async Operations: Thực hiện nhiều task insert/update cùng lúc.
+        . Tách thành 2 DB: Có thể xem xét việc tách thành 2 DB, 1 DB chỉ dành riêng cho việc GHI.
+        . Việc GHI data có thể dùng Entity Framework.
