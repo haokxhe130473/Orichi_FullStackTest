@@ -13,7 +13,6 @@ const App = () => {
           </div>
       </AppProvider>
   </div>
-
   );
 };
 

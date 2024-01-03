@@ -1,0 +1,20 @@
+/* MyForm.css */
+
+/* Custom styles for Polaris form */
+.form-section {
+    margin-bottom: 20px;
+  }
+  
+  .custom-label {
+    font-weight: bold;
+    color: #333; /* Change label color */
+  }
+  
+  .custom-input {
+    border-color: #ddd; /* Change input border color */
+  }
+  
+  .custom-button {
+    margin-top: 10px;
+  }
+  
