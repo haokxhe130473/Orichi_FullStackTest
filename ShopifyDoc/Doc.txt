@@ -1,0 +1,12 @@
+- Sử dụng autofac trong.Net framework:
+	+ Contract
+	+ Model
+	+ Repository
+	+ Service
+	+ Api
+		+ Owin Start up class
+			+ Register Webapi controller
+			+ Asp net identity
+			+ Register service
+			+ Register repository
+			+ Add in to Autofac container
